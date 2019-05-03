@@ -1,0 +1,11 @@
+---
+# Conditional variables
+cda_aws_region: "{{ cda_aws_region_default if cda_aws_region_metadata is not defined else cda_aws_region_metadata }}"
+
+# Determine if the instance is in AWS or outside
+cda_is_aws_instance: "{{ true if cda_is_aws_instance__dot_not_use_it is defined else false }}"
+
+cda_package: codedeploy-agent
+cda_package_url: "https://aws-codedeploy-{{ cda_aws_region }}.s3.amazonaws.com/latest/install"
+
+cda_temp_path: /tmp
