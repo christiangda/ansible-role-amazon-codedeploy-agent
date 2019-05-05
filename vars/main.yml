@@ -9,3 +9,6 @@ cda_package: codedeploy-agent
 cda_package_url: "https://aws-codedeploy-{{ cda_aws_region }}.s3.amazonaws.com/latest/install"
 
 cda_temp_path: /tmp
+
+cda_pip_dependencies_packages:
+  - awscli
