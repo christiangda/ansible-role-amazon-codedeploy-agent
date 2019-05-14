@@ -196,8 +196,24 @@ cd christiangda.amazon_codedeploy_agent
 
 **Execute the test**
 
+Using docker in local
+
 ```bash
-molecule test
+molecule test [--scenario-name default]
+```
+
+Using vagrant in local
+
+```bash
+molecule create --scenario-name vagrant
+molecule converge --scenario-name vagrant
+molecule verify --scenario-name vagrant
+```
+
+or
+
+```bash
+molecule test --scenario-name vagrant
 ```
 
 **Additionally if you want to test it using VMs, I have a very nice [ansible-playground project](https://github.com/christiangda/ansible-playground) that use Vagrant and VirtualBox, try it!.**
