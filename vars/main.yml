@@ -10,5 +10,4 @@ cda_package_url: "https://aws-codedeploy-{{ cda_aws_region }}.s3.amazonaws.com/l
 
 cda_temp_path: /tmp
 
-cda_pip_dependencies_packages:
-  - awscli
+cda_global_downloads_timeout: 120

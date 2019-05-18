@@ -14,10 +14,6 @@ lint:
       ignore: venv
 
 platforms:
-  - name: centos-6
-    box: centos/6
-    memory: 512
-    cpus: 1
 
   - name: centos-7
     box: centos/7
@@ -41,11 +37,6 @@ platforms:
 
   - name: ubuntu-18.04
     box: ubuntu/bionic64
-    memory: 512
-    cpus: 1
-
-  - name: debian-8
-    box: debian/jessie64
     memory: 512
     cpus: 1
 

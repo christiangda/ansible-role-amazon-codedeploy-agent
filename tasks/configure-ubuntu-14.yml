@@ -1,0 +1,10 @@
+---
+- name: Enable service {{ cda_package }}
+  service:
+    name: "{{ cda_package }}"
+    enabled: true
+    state: started
+  when: ansible_virtualization_type != "docker"
+  tags:
+    - enable-service
+    - start-service

@@ -6,20 +6,18 @@
   tags:
     - install
 
-- name: Download {{ cda_package }} when is aws ec2 instance
+- name: Download {{ cda_package }}
   get_url:
     url: "{{ cda_package_url }}"
     dest: "/{{ cda_temp_path }}/{{ cda_package }}"
     timeout: "{{ cda_global_downloads_timeout }}"
     mode: 0755
-  when: cda_is_aws_instance
   tags:
     - download
     - install
 
-- name: Install {{ cda_package }} when is aws ec2 instance
+- name: Install {{ cda_package }}
   command: "/{{ cda_temp_path }}/{{ cda_package }} auto"
   changed_when: false
-  when: cda_is_aws_instance
   tags:
     - install
